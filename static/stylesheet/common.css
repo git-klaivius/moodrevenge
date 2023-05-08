@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Roboto+Mono:wght@400;600;700&display=swap");
+
+:root {
+  --col1: #fa4444;
+  --col2: #ffcc00;
+  --colblack: #000000;
+  --colwhite: #ffffff;
+  --coltwitch: #9146ff;
+  --coltwitter: #1da1f2;
+  --colyoutube: #ff0000;
+  --f-daruma: "Darumadrop One", cursive;
+  --f-roboto: "Roboto Mono", monospace;
+
+  --fs-1: 1rem;
+  --fs-1-25: 1.25rem;
+  --fs-1-5: 1.5rem;
+}
+
+* {
+  font-family: var(--f-daruma);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  user-select:none;
+}
+
+.show-mob{
+  display:none;
+}
+
+.no-select{
+  user-select: none;
+}
+.ok-select{
+  user-select:text;
+}
