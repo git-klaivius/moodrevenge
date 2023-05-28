@@ -14,6 +14,8 @@
   --fs-1: 1rem;
   --fs-1-25: 1.25rem;
   --fs-1-5: 1.5rem;
+  --fs-2: 2rem;
+  --fs-5: 5rem;
 }
 
 * {
@@ -33,4 +35,20 @@
 }
 .ok-select{
   user-select:text;
+}
+
+.none{
+  display:none;
+}
+.hidden{
+  visibility: hidden;
+}
+.opa{
+  opacity:0 !important;
+}
+.trans3{
+  transition:3s !important;
+}
+.mt-1{
+  margin-top:1rem;
 }

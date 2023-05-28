@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #visual {
+            position:absolute;
+            left:0;
+            transform-origin: left;
+            transform: scaleY(5) scaleX(1.5);
+        }
+    </style>
+  </head>
+  <body>
+    <svg
+      id="visual"
+      viewBox="0 0 900 600"
+      width="900"
+      height="600"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      version="1.1"
+      preserveAspectRatio="none"
+    
+    >
+    <path 
+    id="b2"
+    d="M103 0L105 11.3C107 22.7 111 45.3 112.8 67.8C114.7 90.3 114.3 112.7 109.2 135.2C104 157.7 94 180.3 89.7 202.8C85.3 225.3 86.7 247.7 91 270.2C95.3 292.7 102.7 315.3 101.3 337.8C100 360.3 90 382.7 90 405.2C90 427.7 100 450.3 105.5 472.8C111 495.3 112 517.7 112.5 528.8L113 540L0 540L0 528.8C0 517.7 0 495.3 0 472.8C0 450.3 0 427.7 0 405.2C0 382.7 0 360.3 0 337.8C0 315.3 0 292.7 0 270.2C0 247.7 0 225.3 0 202.8C0 180.3 0 157.7 0 135.2C0 112.7 0 90.3 0 67.8C0 45.3 0 22.7 0 11.3L0 0Z" fill="#FFCC00" stroke-linecap="round" stroke-linejoin="miter"></path>
+
+      <path id="b3"
+      style="visibility: hidden"
+        d="M92 0L90.2 12.8C88.3 25.7 84.7 51.3 83.2 77C81.7 102.7 82.3 128.3 87.8 154C93.3 179.7 103.7 205.3 104.8 231.2C106 257 98 283 95.2 308.8C92.3 334.7 94.7 360.3 98.7 386C102.7 411.7 108.3 437.3 106.3 463C104.3 488.7 94.7 514.3 89.8 527.2L85 540L0 540L0 527.2C0 514.3 0 488.7 0 463C0 437.3 0 411.7 0 386C0 360.3 0 334.7 0 308.8C0 283 0 257 0 231.2C0 205.3 0 179.7 0 154C0 128.3 0 102.7 0 77C0 51.3 0 25.7 0 12.8L0 0Z"
+        fill="#FFCC00"
+        stroke-linecap="round"
+        stroke-linejoin="miter"
+      ></path>
+    </svg>
+
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+    <script>
+      const tween = KUTE.fromTo(
+        "#b2",
+        { path: "#b2" },
+        { path: "#b3" },
+        { repeat: 999, duration: 1500, yoyo: true }
+      ).start();
+    </script>
+  </body>
+</html>
