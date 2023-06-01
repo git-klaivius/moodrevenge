@@ -52,3 +52,11 @@
 .mt-1{
   margin-top:1rem;
 }
+
+strike-through{
+  text-decoration: line-through;
+}
+
+strike-through.link{
+  color:var(--col1);
+}

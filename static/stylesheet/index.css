@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  overflow:hidden;
   /* background-color: var(--colblack); */
 }
 #mainmenu {
@@ -7,6 +8,8 @@ body {
   height: 100%;
   display: flex;
   justify-content: center;
+  background-color: black;
+  overflow: hidden;
 }
 #menus {
   display: flex;
@@ -41,7 +44,7 @@ body {
   right: -4vw;
 }
 #menus img {
-  height: 100%;
+  height: 95%;
 }
 #menus #menu2 {
   position: relative;
@@ -50,4 +53,123 @@ body {
 br-1 {
   display: inline-block;
   height: 20px;
+}
+
+
+/* MENU */
+
+#juice_menu{
+  position:absolute;
+  top:0;
+  left:-100%;
+  transform-origin: left;
+  transform: scaleY(5) scaleX(1.5);
+  transition:1s;
+}
+
+/* NEWSLETTER */
+#newsletter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--col2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top:0;
+  left:-200%;
+  transition: 1s;
+}
+
+#closeBtn{
+  position:absolute;
+  top:10px;
+  left:10px;
+  font-size:2rem;
+  cursor: pointer;
+  transition:0.1s;
+}
+#closeBtn:hover{
+  color:var(--col1);
+}
+#newsletter_inner_ctn {
+  position: relative;
+  max-width: 40vw;
+  margin-right: 30vw;
+  text-align: center;
+  z-index: 2;
+}
+#newsletter_title {
+  font-size: clamp(3rem,5vmax,4.5rem);
+}
+#newsletter_details {
+  font-size: 2.5rem;
+  
+}
+#newsletter_input_ctn {
+  position:relative;
+}
+#newsletter_input_ctn img {
+  width: 100%;
+  min-width:400px;
+  /* display:none; */
+}
+#newsletter_input {
+  position:absolute;
+  top: 50%;  /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
+  background-color:none;
+  font-family: var(--f-roboto);
+  font-size: clamp(1.5rem,3vmax,2.25rem);
+  text-align:center;
+  border:none;
+  outline:none;
+  background-color:transparent;
+  max-width:80%;
+}
+#newsletter_input::placeholder {
+  opacity:0.4;
+}
+#newsletter_bg{
+  position:absolute;
+  top:0;
+  right:0;
+  height:100%;
+  z-index: 1;
+}
+#newsletter_signup_btn{
+  margin-top:1rem;
+  min-width:250px;
+  min-height:70px;
+  color:white;
+  background-color:var(--col1);
+  border:none;outline:none;
+  cursor:pointer;
+  opacity:0.75;
+  font-size:2rem;
+  transition:0.2s;
+  border-radius:50px;
+}
+#newsletter_signup_btn:hover{
+  opacity:1;
+  font-size:2.2rem;
+}
+/* MOBILE ONLY */
+@media only screen and (max-width: 768px) {
+  #newsletter_inner_ctn{
+      margin:0;
+      display:inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 90%;
+      min-width:300px;
+  }
+  #newsletter_input_ctn img{
+      min-width:80%;
+  }
+  #newsletter_signup_btn{
+    opacity:1;
+  }
 }
