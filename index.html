@@ -16,7 +16,7 @@
   <body>
     <div id="mainmenu">
         <div id="menus">
-            <li id="menu1">
+            <li id="menu1" class="desktoponly">
                 <ul style="padding-top:1rem;">i'm luci!</ul>
                 <br-1></br-1>
                 <ul><a href="https://www.twitch.tv/lucifvr" target="_blank">twitch</a></ul>
@@ -26,9 +26,9 @@
                 <ul><a href="https://www.pixiv.net/en/users/33497765" target="_blank">pixiv</a></ul>
                 <ul><a href="https://www.instagram.com/moodrevenge/" target="_blank">instagram</a></ul>
             </li>
-            <img src="./static/media/img/luci_juice.gif" alt="luci_juice" draggable="false" />
+            <img src="./static/media/img/luci_juice.gif" alt="luci_juice" draggable="false" id="luci_juice" class="desktoponly"/>
             <li id="menu2" style="text-align:left;">
-                <span class="show-mob">
+                <span class="mobileonly">
                     <ul style="padding-top:1rem;">i'm luci!</ul>
                     <br-1></br-1>
                     <ul><a href="https://www.twitch.tv/lucifvr">twitch</a></ul>
@@ -48,9 +48,14 @@
                 <br-1></br-1>
                 <ul><a href="#" onclick="openNewsletter();">newsletter</a></ul>
                 <ul><strike-through class="link">discord</strike-through></ul>
+                <br>
             </li>
         </div>
     </div>
+
+
+
+
 
     <!-- <div id="gallery"></div> -->
     <div id="newsletter">
@@ -80,7 +85,7 @@
     </div>
 
     <!-- juice menu -->
-    <svg
+    <!-- <svg
     id="juice_menu"
     viewBox="0 0 900 600"
     width="900"
@@ -102,7 +107,7 @@
       stroke-linecap="round"
       stroke-linejoin="miter"
     ></path>
-  </svg>
+  </svg> -->
     <!-- anim -->
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
     <script>
@@ -143,8 +148,14 @@
       function openNewsletter(){
         $('#newsletter').css('left','0px');
         $('#juice_menu').css('left','100%');
+
+        setTimeout(function(){
+          $('#newsletter_bg').css('right','0px');
+        }, 700);
+        
       }
       function closeNewsletter(){
+        $('#newsletter_bg').css('right','-100%');
         $('#newsletter').css('left','-200%');
         $('#juice_menu').css('left','-100%');
       }

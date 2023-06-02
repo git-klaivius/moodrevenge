@@ -26,9 +26,7 @@
   user-select:none;
 }
 
-.show-mob{
-  display:none;
-}
+
 
 .no-select{
   user-select: none;
@@ -59,4 +57,23 @@ strike-through{
 
 strike-through.link{
   color:var(--col1);
+}
+
+.changemenu{
+  display:none !important;
+}
+
+/* MOBILE ONLY */
+@media only screen and (max-width: 768px) {
+ .desktoponly{
+  display:none !important;
+ }
+}
+
+/* desktop ONLY */
+@media only screen and (min-width: 768px) {
+  .mobileonly{
+    display:none !important;
+  }
+
 }
