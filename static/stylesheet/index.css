@@ -201,7 +201,7 @@ br-1 {
     background-repeat: no-repeat;
   }
   #menus *{
-    font-size:1.75rem !important;
+    font-size:1.3rem !important;
     
   }
   #menus{
@@ -216,4 +216,12 @@ br-1 {
     
   }
   body{overflow:auto;}
+  #newsletter_details{
+    -webkit-text-stroke-width: 1px;
+    /* -webkit-text-stroke-color: black; */
+    text-shadow: 3px 3px black;
+  }
+  #newsletter_input_ctn img{
+    border-radius:15px;
+  }
 }
